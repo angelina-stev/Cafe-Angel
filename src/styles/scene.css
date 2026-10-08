@@ -1,0 +1,35 @@
+.scene {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: radial-gradient(circle at 20% 10%, rgba(216,183,122,.11), transparent 28%), #0e0d0b;
+}
+.scene::before { content: ""; position: absolute; inset: 0; opacity: .045; background-image: radial-gradient(rgba(216,183,122,.9) .7px, transparent .7px); background-size: 25px 25px; }
+.ambient { position: absolute; width: 360px; height: 360px; border-radius: 50%; filter: blur(90px); pointer-events: none; }
+.ambient--one { background: #c39a59; opacity: .07; top: -100px; left: -100px; }
+.ambient--two { background: #6f8064; opacity: .07; right: -130px; bottom: -100px; }
+.phone-frame {
+  position: relative;
+
+  width: min(100%, 1040px);
+  height: min(900px, calc(100vh - 48px));
+  min-height: 680px;
+
+  overflow: hidden;
+
+  border: 9px solid #201a15;
+  border-radius: 30px;
+
+  background: #1c130f;
+
+  box-shadow:
+    0 35px 100px rgba(0, 0, 0, .7),
+    0 0 0 1px rgba(216, 183, 122, .16),
+    inset 0 0 0 1px rgba(255, 255, 255, .05);
+
+  perspective: 1200px;
+  z-index: 2;
+}

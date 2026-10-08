@@ -1,0 +1,223 @@
+.interior {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  opacity: 0;
+  transform: translateY(18px);
+
+  pointer-events: none;
+
+  background: #f4ecdf;
+  color: #2c211b;
+
+  transition:
+    opacity .65s ease,
+    transform .7s ease;
+}
+
+.interior--visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.cafe-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  min-height: 62px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: #f8efdf;
+  background: rgba(20, 17, 14, .97);
+  border-bottom: 1px solid rgba(216,183,122,.22);
+  box-shadow: 0 8px 22px rgba(0,0,0,.18);
+}
+
+.cafe-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.cafe-brand__icon {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #201811;
+  background: linear-gradient(135deg, #e8ca8c, #a67b43);
+  box-shadow: 0 4px 12px rgba(0,0,0,.3);
+}
+
+.cafe-brand > div:last-child {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.cafe-brand strong {
+  color: #f1d59b;
+  font: 600 21px var(--lux-title);
+  letter-spacing: .08em;
+}
+
+.cafe-brand span {
+  color: #a99d8e;
+  font-size: 9px;
+  letter-spacing: .06em;
+  white-space: nowrap;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 13px;
+  border: 1px solid rgba(216,183,122,.3);
+  border-radius: 999px;
+  color: #dbc28f;
+  background: #211b16;
+  cursor: pointer;
+}
+
+.back-button:hover { background: #2c241d; }
+
+.interior-scroll {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 24px 28px 30px;
+}
+
+.cafe-hero {
+  min-height: 205px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 30px 34px;
+  overflow: hidden;
+  border: 1px solid #dfcdb0;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #fffaf1, #ead9bc);
+  box-shadow: 0 12px 28px rgba(70,48,30,.1);
+}
+
+.hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #9a6e3d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .18em;
+}
+
+.cafe-hero h2 {
+  margin: 8px 0;
+  color: #6b4d3a;
+  font: 600 clamp(2rem,4vw,3.2rem) var(--lux-title);
+  line-height: .98;
+}
+
+.cafe-hero h2 em {
+  color: #8c6237;
+  font-family: var(--lux-display);
+  font-weight: 600;
+}
+
+.cafe-hero p {
+  margin: 0;
+  color: #766757;
+  font-size: 13px;
+}
+
+.hero-cup { position: relative; width: 145px; height: 120px; flex: 0 0 auto; }
+.cup {
+  position: absolute;
+  right: 12px;
+  bottom: 2px;
+  width: 94px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+  color: #8d593e;
+  background: #fff5d9;
+  border-radius: 10px 10px 25px 25px;
+  border: 3px solid #e6c993;
+  box-shadow: 0 11px 18px rgba(0,0,0,.18);
+}
+.cup::after {
+  content: "";
+  position: absolute;
+  right: -23px;
+  top: 17px;
+  width: 27px;
+  height: 34px;
+  border: 5px solid #e6c993;
+  border-left: 0;
+  border-radius: 0 18px 18px 0;
+}
+.steam {
+  position: absolute;
+  bottom: 70px;
+  width: 6px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(117, 92, 40, 0.55);
+  filter: blur(2px);
+  animation: steam 2.3s ease-in-out infinite;
+}
+.steam--1 { right: 72px; }
+.steam--2 { right: 48px; animation-delay: .7s; height: 35px; }
+@keyframes steam { from { transform: translateY(8px) scale(.8); opacity: 0; } 45% { opacity: .7; } to { transform: translateY(-25px) scale(1.25); opacity: 0; } }
+
+
+.order-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, .8fr);
+  gap: 22px;
+  align-items: start;
+  margin-top: 22px;
+}
+
+.receipt-wrap {
+  position: sticky;
+  top: 82px;
+}
+
+.inside-footer {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 24px;
+  padding: 8px 0 10px;
+
+  color: #8e806f;
+
+  font-size: 10px;
+
+  letter-spacing: .05em;
+
+  text-align: center;
+}

@@ -1,0 +1,31 @@
+@media (max-width:900px) {
+  .phone-frame { width:min(100%,760px); }
+  .order-layout { grid-template-columns:1fr; }
+  .receipt-wrap { position:static; }
+  .receipt { transform:rotate(-.5deg); }
+}
+
+@media (max-width:620px) {
+  .scene { padding:0; }
+  .phone-frame { width:100%; height:100vh; min-height:620px; border:0; border-radius:0; }
+  .exterior { padding:14px 16px; }
+  .sign-area h1 { font-size:3.2rem; }
+  .door { width:195px; height:300px; }
+  .door-zone::before { left:calc(50% - 135px); }
+  .door-zone::after { right:calc(50% - 135px); }
+  .cafe-header { padding:11px 14px; }
+  .cafe-brand strong { font-size:19px; }
+  .cafe-brand span { font-size:9px; }
+  .interior-scroll { padding:14px 12px 25px; }
+  .cafe-hero { min-height:160px; padding:22px; }
+  .cafe-hero h2 { font-size:31px; }
+  .hero-cup { transform:scale(.75); transform-origin:right center; width:105px; }
+  .order-paper { padding:18px 14px; }
+  .field-row { grid-template-columns:1fr; }
+  .menu-card { grid-template-columns:39px minmax(0,1fr) auto; padding:8px 4px; }
+  .menu-icon { width:36px; height:36px; font-size:20px; }
+  .menu-info strong { font-size:18px; }
+  .stepper button { width:28px; height:28px; }
+}
+
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition-duration:.01ms!important; } }

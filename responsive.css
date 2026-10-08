@@ -1,0 +1,15 @@
+@media (max-height: 750px) {
+  .phone-frame {
+    height: calc(100vh - 32px);
+    min-height: 0;
+  }
+
+  .interior-scroll {
+    padding-top: 18px;
+    padding-bottom: 24px;
+  }
+
+  .cafe-hero {
+    min-height: 180px;
+  }
+}

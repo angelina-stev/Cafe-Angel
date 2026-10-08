@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+:root {
+  --cream: #f8f0df;
+  --brown: #2c1d17;
+  --gold: #d8b77a;
+  --dark: #0e0d0b;
+  --lux-cream: #f5efe4;
+  --lux-title: "Playfair Display", Georgia, serif;
+  --lux-display: "Cormorant Garamond", Georgia, serif;
+  --lux-body: "Inter", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; min-height: 100%; }
+body { min-height: 100vh; background: var(--dark); color: var(--brown); font-family: var(--font-body); }
+button, input, textarea { font: inherit; }
+button { border: 0; }
+button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid rgba(233,185,95,.75); outline-offset: 2px; }
